@@ -42,3 +42,7 @@ while inputs:
         else:
             print>>sys.stderr,'sending %s to %s' %(next_msg,k.getpeername())
             k.send(next_msg)
+    for t in exception:
+        print>>sys.stderr,'handling exception for ',t.getpeername()
+        inputs.remove(t)
+        if t in 
